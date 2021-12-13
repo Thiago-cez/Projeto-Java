@@ -1,0 +1,66 @@
+package br.com.projetoJava;
+
+import java.util.Scanner;
+
+public class Pacote1 {
+	public static void main(String[] args) {
+
+	    Scanner leia = new Scanner(System.in);
+
+	    String pessoa, diario, CEP;
+	    int controle = 0;
+
+	    System.out.println(" Você possui HIV?");
+	        pessoa = leia.nextLine();
+
+	    if ("Sim".equals(pessoa) || "sim".equals(pessoa) || "SIM".equals(pessoa) || "Não".equals(pessoa) || "não".equals(pessoa) || "NÂO".equals(pessoa) || "nao".equals(pessoa) || "Não sei".equals(pessoa) || "Não Sei".equals(pessoa) || "não sei".equals(pessoa) || "NÂO SEI".equals(pessoa)) { 
+
+	        controle = 1;
+	    }
+
+	    else {
+
+	        while (controle != 1) {
+
+	            System.out.println("Não entendi. Possíveis respostas: Sim / Não / Não Sei");
+	                pessoa = leia.nextLine();
+
+	        if ("Sim".equals(pessoa) || "sim".equals(pessoa) || "SIM".equals(pessoa) || "Não".equals(pessoa) || "não".equals(pessoa) || "NÂO".equals(pessoa) || "nao".equals(pessoa) || "Não sei".equals(pessoa) || "Não Sei".equals(pessoa) || "não sei".equals(pessoa) || "NÂO SEI".equals(pessoa)) {
+	            controle = 1;
+	            }
+
+	        }
+
+	    }
+
+	    if ("Sim".equals(pessoa) || "sim".equals(pessoa) || "SIM".equals(pessoa)) {
+	        System.out.println("Digite seu diário medicamentoso");
+	            diario = leia.nextLine();
+	        System.out.println("Procure um CTA");
+	        System.out.println("Digite seu CEP: ");
+	            CEP = leia.nextLine();
+	        System.out.println("O local mais próximo é: Rua xxxxxxxxxx" );
+
+
+	    }
+	    else if ("Não".equals(pessoa) || "não".equals(pessoa) || "NÂO".equals(pessoa) || "nao".equals(pessoa)) {
+	        System.out.println("Você tem interesse em participar de uma pesquisa sobre vacina conta o HIV?");
+	            pessoa = leia.nextLine();
+	            if ("Sim".equals(pessoa) || "sim".equals(pessoa) || "SIM".equals(pessoa)) {
+	                System.out.println("Critérios de Inclusão");
+	            }
+	            else if ("Não".equals(pessoa) || "não".equals(pessoa) || "NÂO".equals(pessoa) || "nao".equals(pessoa)) {
+	                System.out.println("Continue se prevenindo");
+	            }
+
+	    }
+	    else if ("Não sei".equals(pessoa) || "Não Sei".equals(pessoa) || "não sei".equals(pessoa) || "NÂO SEI".equals(pessoa)) {
+	        System.out.println("Procure um CTA");
+	        System.out.println("Informe o CEP: ");
+	            CEP = leia.nextLine();
+	        System.out.println("O local mais próximo é: Rua xxxxx");
+	        }
+	    }
+
+	}
+
